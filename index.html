@@ -1,10 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pixel Art Maker!</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Monoton"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../images/icons8-pixel-heart-48.png"
+    />
   </head>
-  <body></body>
+  <body>
+    <h1>Pixel Art Maker</h1>
+    <div class="underline"></div>
+    <form id="sizePicker">
+      <div class="inputSections">
+        <div class="sizes">
+          <label for="inputHeight" class="numLabels">Height</label>
+          <input
+            type="number"
+            class="numInputs"
+            id="inputHeight"
+            name="height"
+            min="1"
+            value="1"
+            max="50"
+          />
+        </div>
+        <div class="sizes">
+          <label for="inputWidth" class="numLabels">Width </label>
+          <input
+            type="number"
+            class="numInputs"
+            id="inputWidth"
+            name="width"
+            min="1"
+            value="1"
+            max="50"
+          />
+        </div>
+      </div>
+      <div class="inputSections">
+        <input type="submit" value="Make Grid" class="subButtons" />
+        <input type="submit" value="Clear Grid" class="subButtons" />
+      </div>
+    </form>
+    <input type="color" id="colorPicker" />
+
+    <table id="pixelCanvas"></table>
+
+    <script src="designs.js"></script>
+  </body>
 </html>
